@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;HASH_LEN=32;PCRE2_CODE_UNIT_WIDTH=8;SALT_LEN=crypto_pwhash_SALTBYTES;_WIN32_WINNT=0x0A00;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -148,7 +148,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;HASH_LEN=32;PCRE2_CODE_UNIT_WIDTH=8;SALT_LEN=crypto_pwhash_SALTBYTES;_WIN32_WINNT=0x0A00;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -169,12 +169,13 @@
     <Lib>
       <AdditionalOptions>/INCLUDE:mi_redirect %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Shlwapi.lib;Rpcrt4.lib;Shell32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="application.hpp" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="pch.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -183,7 +184,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="qlogicae_static_library.cpp" />
+    <ClCompile Include="application.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="assembly.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

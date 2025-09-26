@@ -45,7 +45,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="application_x64.asm">
+    <MASM Include="assembly.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

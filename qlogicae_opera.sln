@@ -23,6 +23,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_dynamic_library", "qlogicae_generic_dynamic_library\qlogicae_generic_dynamic_library.vcxproj", "{22CBC044-9EA1-4BA2-9476-2ED73224FB15}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_static_library", "qlogicae_generic_static_library\qlogicae_generic_static_library.vcxproj", "{44DA86C5-4612-45CC-B2B8-6CCD143B51FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_cogita", "..\qlogicae_cogita\qlogicae_cogita\qlogicae_cogita.vcxproj", "{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}"
 EndProject

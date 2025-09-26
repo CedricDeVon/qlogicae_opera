@@ -4,12 +4,9 @@ OPTION CASEMAP: NONE
 .DATA
 .DATA?
 .CODE
-test_x64 PROC
-	SUB RSP, 40
-
-	ADD RSP, 40
+qlogicae_test__assembly PROC
 	RET
 
-test_x64 ENDP
+qlogicae_test__assembly ENDP
 
 END
