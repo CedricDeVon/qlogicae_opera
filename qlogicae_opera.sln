@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_qt_gui", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_cli", "..\qlogicae-cli\qlogicae_cli\qlogicae_cli.vcxproj", "{F1E3599F-EE3D-4B74-811F-2F099DF27A6A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_plotica_sandbox", "..\qlogicae_plotica\qlogicae_plotica_sandbox\qlogicae_plotica_sandbox.vcxproj", "{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{F1E3599F-EE3D-4B74-811F-2F099DF27A6A}.Release|x64.Build.0 = Release|x64
 		{F1E3599F-EE3D-4B74-811F-2F099DF27A6A}.Release|x86.ActiveCfg = Release|Win32
 		{F1E3599F-EE3D-4B74-811F-2F099DF27A6A}.Release|x86.Build.0 = Release|Win32
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Debug|x64.ActiveCfg = Debug|x64
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Debug|x64.Build.0 = Debug|x64
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Debug|x86.ActiveCfg = Debug|Win32
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Debug|x86.Build.0 = Debug|Win32
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Release|x64.ActiveCfg = Release|x64
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Release|x64.Build.0 = Release|x64
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Release|x86.ActiveCfg = Release|Win32
+		{814EAEE7-535F-4A46-B9A2-C6B2EC6AD9B4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
