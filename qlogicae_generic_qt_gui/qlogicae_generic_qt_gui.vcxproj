@@ -89,7 +89,7 @@
     <Link>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
@@ -123,7 +123,7 @@ xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindowsd.dll" "$(OutDir)platfo
     </ClCompile>
     <Link>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
       <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>

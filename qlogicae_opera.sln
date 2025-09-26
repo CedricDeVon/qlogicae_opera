@@ -10,10 +10,17 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_sandbox", "qlogicae_generic_sandbox\qlogicae_generic_sandbox.vcxproj", "{7C5CA3C8-D362-4C9C-BC6C-40426F6CF446}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_benchmarks", "qlogicae_generic_benchmarks\qlogicae_generic_benchmarks.vcxproj", "{074102E4-886E-46DF-A2AE-76C98C3E3BF8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+		{BD70CBB4-BA38-4F14-AA9A-8C501C946245} = {BD70CBB4-BA38-4F14-AA9A-8C501C946245}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_core", "..\qlogicae_core\qlogicae_core\qlogicae_core.vcxproj", "{07F44EB2-776B-4BB0-B462-589523A3D3F3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_plotica", "..\qlogicae_plotica\qlogicae_plotica\qlogicae_plotica.vcxproj", "{BD70CBB4-BA38-4F14-AA9A-8C501C946245}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_console", "qlogicae_generic_console\qlogicae_generic_console.vcxproj", "{E39FB9D3-B3E4-4041-B22B-F1A3F473DB14}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -24,8 +31,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_static_lib
 	ProjectSection(ProjectDependencies) = postProject
 		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_cogita", "..\qlogicae_cogita\qlogicae_cogita\qlogicae_cogita.vcxproj", "{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_qt_gui", "qlogicae_generic_qt_gui\qlogicae_generic_qt_gui.vcxproj", "{C561626D-0FBE-4F1A-B492-75F47EFA1EFF}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -104,14 +109,6 @@ Global
 		{44DA86C5-4612-45CC-B2B8-6CCD143B51FD}.Release|x64.Build.0 = Release|x64
 		{44DA86C5-4612-45CC-B2B8-6CCD143B51FD}.Release|x86.ActiveCfg = Release|Win32
 		{44DA86C5-4612-45CC-B2B8-6CCD143B51FD}.Release|x86.Build.0 = Release|Win32
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Debug|x64.ActiveCfg = Debug|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Debug|x64.Build.0 = Debug|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Debug|x86.ActiveCfg = Debug|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Debug|x86.Build.0 = Debug|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Release|x64.ActiveCfg = Release|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Release|x64.Build.0 = Release|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Release|x86.ActiveCfg = Release|x64
-		{86A538FC-6F24-4FBA-B374-CAE6D98DFE7C}.Release|x86.Build.0 = Release|x64
 		{C561626D-0FBE-4F1A-B492-75F47EFA1EFF}.Debug|x64.ActiveCfg = Debug|x64
 		{C561626D-0FBE-4F1A-B492-75F47EFA1EFF}.Debug|x64.Build.0 = Debug|x64
 		{C561626D-0FBE-4F1A-B492-75F47EFA1EFF}.Debug|x86.ActiveCfg = Debug|x64

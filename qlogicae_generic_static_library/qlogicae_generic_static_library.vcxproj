@@ -136,7 +136,7 @@
     <Lib>
       <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
       <AdditionalOptions>/INCLUDE:mi_redirect %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
       <AdditionalDependencies>qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
@@ -168,7 +168,7 @@
     </Link>
     <Lib>
       <AdditionalOptions>/INCLUDE:mi_redirect %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
       <AdditionalDependencies>qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
