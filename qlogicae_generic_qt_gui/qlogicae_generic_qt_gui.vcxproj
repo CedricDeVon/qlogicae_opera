@@ -63,7 +63,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
@@ -89,10 +89,19 @@
     <Link>
       <LinkTimeCodeGeneration>
       </LinkTimeCodeGeneration>
-      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Cored.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Guid.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Core.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Gui.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgets.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgetsd.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindows.dll" "$(OutDir)platforms\" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindowsd.dll" "$(OutDir)platforms\" /Y /F</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -115,13 +124,19 @@
     <Link>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>../$(IntDir)qlogicae_core</AdditionalLibraryDirectories>
-      <AdditionalDependencies>qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Core.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Gui.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgets.dll" "$(OutDir)" /Y /F
+xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindows.dll" "$(OutDir)platforms\" /Y /F</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -137,8 +152,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
     <ClCompile>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -159,16 +174,18 @@
   <ItemGroup>
     <QtRcc Include="application.qrc" />
     <QtUic Include="application.ui" />
-    <QtMoc Include="application.h" />
+    <QtMoc Include="application.hpp" />
     <ClCompile Include="application.cpp" />
     <ClCompile Include="main.cpp" />
-    <None Include="qlogicae_generic_qt_gui.ico" />
-    <ResourceCompile Include="qlogicae_generic_qt_gui.rc" />
+    <ResourceCompile Include="resource.rc" />
     <ClInclude Include="stdafx.h" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="assembly.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

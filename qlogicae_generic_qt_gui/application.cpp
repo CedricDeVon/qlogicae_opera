@@ -1,12 +1,23 @@
 #include "stdafx.h"
-#include "application.h"
 
-Application::Application(QWidget *parent)
-    : QMainWindow(parent)
+#include "application.hpp"
+
+#ifndef x64_MASM_ASSEMBLY
+
+extern "C" void qlogicae_qt_gui__assembly();
+
+#endif
+
+namespace QLogicaeQtGUI
 {
-    ui.setupUi(this);
+    Application::Application(QWidget* parent)
+        : QMainWindow(parent)
+    {
+        ui.setupUi(this);
+    }
+
+    Application::~Application()
+    {
+
+    }
 }
-
-Application::~Application()
-{}
-

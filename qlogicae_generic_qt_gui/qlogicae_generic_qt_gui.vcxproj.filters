@@ -29,16 +29,13 @@
     <QtUic Include="application.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="application.h">
+    <QtMoc Include="application.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <None Include="qlogicae_generic_qt_gui.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <ResourceCompile Include="qlogicae_generic_qt_gui.rc">
+    <ResourceCompile Include="resource.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
     <ClInclude Include="stdafx.h">
@@ -52,5 +49,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="assembly.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
