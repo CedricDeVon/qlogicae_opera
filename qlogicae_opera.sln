@@ -16,6 +16,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_plotica", "..\qlogicae_plotica\qlogicae_plotica\qlogicae_plotica.vcxproj", "{BD70CBB4-BA38-4F14-AA9A-8C501C946245}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_console", "qlogicae_generic_console\qlogicae_generic_console.vcxproj", "{E39FB9D3-B3E4-4041-B22B-F1A3F473DB14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_generic_dynamic_library", "qlogicae_generic_dynamic_library\qlogicae_generic_dynamic_library.vcxproj", "{22CBC044-9EA1-4BA2-9476-2ED73224FB15}"
 EndProject
