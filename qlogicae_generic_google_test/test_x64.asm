@@ -4,12 +4,12 @@ OPTION CASEMAP: NONE
 .DATA
 .DATA?
 .CODE
-application_x64 PROC
+test_x64 PROC
 	SUB RSP, 40
 
 	ADD RSP, 40
 	RET
 
-application_x64 ENDP
+test_x64 ENDP
 
 END
