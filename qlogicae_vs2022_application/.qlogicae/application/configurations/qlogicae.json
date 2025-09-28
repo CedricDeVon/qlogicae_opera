@@ -1,0 +1,158 @@
+{
+    "application": {
+        "startup_project_name": "",
+        "is_administration_access_required": false,
+        "license_file_path": "qlogicae\\application\\documentation\\LICENSE.txt",
+        "icon_file_path": "qlogicae\\application\\assets\\application.ico",
+        "release_folder_path": "qlogicae\\qlogicae\\application\\releases"
+    },
+    "windows_registry": {
+        "hkcu": {
+            "is_enabled": true
+        },
+        "hklm": {
+            "is_enabled": false
+        }
+    },
+    "environment_variables": {
+        "user": {
+            "is_enabled": false
+        },
+        "system": {
+            "is_enabled": false
+        }
+    },
+    "scripts": {
+        "sample": "echo sample"
+    },
+    "visual_studio_2022": {
+        "full_devenv_executable_path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.com"
+    },
+    "inno_setup": {
+        "privileges_required": "admin",
+        "is_application_path_added_to_environment_variables": true,
+        "full_executable_path": "C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+        "languages": {
+            "english": {
+                "is_enabled": true,
+                "message_file": "compiler:Default.isl"
+            },
+            "arabic": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Arabic.isl"
+            },
+            "armenian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Armenian.isl"
+            },
+            "brazilianportuguese": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\BrazilianPortuguese.isl"
+            },
+            "bulgarian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Bulgarian.isl"
+            },
+            "catalan": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Catalan.isl"
+            },
+            "corsican": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Corsican.isl"
+            },
+            "czech": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Czech.isl"
+            },
+            "danish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Danish.isl"
+            },
+            "dutch": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Dutch.isl"
+            },
+            "finnish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Finnish.isl"
+            },
+            "french": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\French.isl"
+            },
+            "german": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\German.isl"
+            },
+            "hebrew": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Hebrew.isl"
+            },
+            "hungarian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Hungarian.isl"
+            },
+            "icelandic": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Icelandic.isl"
+            },
+            "italian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Italian.isl"
+            },
+            "japanese": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Japanese.isl"
+            },
+            "korean": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Korean.isl"
+            },
+            "norwegian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Norwegian.isl"
+            },
+            "polish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Polish.isl"
+            },
+            "portuguese": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Portuguese.isl"
+            },
+            "russian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Russian.isl"
+            },
+            "slovak": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Slovak.isl"
+            },
+            "slovenian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Slovenian.isl"
+            },
+            "spanish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Spanish.isl"
+            },
+            "swedish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Swedish.isl"
+            },
+            "tamil": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Tamil.isl"
+            },
+            "turkish": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Turkish.isl"
+            },
+            "ukrainian": {
+                "is_enabled": false,
+                "message_file": "compiler:Languages\\Ukrainian.isl"
+            }
+        }
+    }
+}
