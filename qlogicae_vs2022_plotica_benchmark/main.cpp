@@ -57,7 +57,12 @@ int main(int argc, char** argv)
                         size_t index, size = data.get_input_size();
                         for (index = 0; index < size; ++index)
                         {
-                            items.push_back(QLogicaeCore::GENERATOR.random_int(1, size));
+                            items.push_back(
+                                QLogicaeCore::GENERATOR.random_int(
+                                    1,
+                                    static_cast<int>(size)
+                                )
+                            );
                         }
                         data.set_payload(items);
                     },
@@ -76,7 +81,12 @@ int main(int argc, char** argv)
                         size_t index, size = data.get_input_size();
                         for (index = 0; index < size; ++index)
                         {
-                            items.push_back(QLogicaeCore::GENERATOR.random_int(1, size));
+                            items.push_back(
+                                QLogicaeCore::GENERATOR.random_int(
+                                    1,
+                                    static_cast<int>(size)
+                                )
+                            );
                         }
                         data.set_payload(items);
                     },
@@ -90,6 +100,12 @@ int main(int argc, char** argv)
             }
         }
     );
+
+    std::cout << "Enter to exit...\n";
+
+    bool exit_code;
+    std::cin >> exit_code;
+
 
     return 0;
 }

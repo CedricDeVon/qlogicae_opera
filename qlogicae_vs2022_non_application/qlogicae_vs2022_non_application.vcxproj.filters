@@ -14,4 +14,26 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="qlogicae\assets\application.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qlogicae\documentation\api.md" />
+    <None Include="qlogicae\documentation\collaboration.md" />
+    <None Include="qlogicae\documentation\development.md" />
+    <None Include="qlogicae\documentation\file-system.md" />
+    <None Include="qlogicae\documentation\index.md" />
+    <None Include="qlogicae\documentation\introduction.md" />
+    <None Include="qlogicae\documentation\legalities.md" />
+    <None Include="qlogicae\documentation\project-state.md" />
+    <None Include="qlogicae\documentation\quality-assurance.md" />
+    <None Include="qlogicae\documentation\references.md" />
+    <None Include="qlogicae\documentation\release-notes.md" />
+    <None Include="qlogicae\documentation\security.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="qlogicae\documentation\LICENSE.txt" />
+  </ItemGroup>
 </Project>

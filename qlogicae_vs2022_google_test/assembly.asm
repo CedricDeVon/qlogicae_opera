@@ -4,9 +4,9 @@ OPTION CASEMAP: NONE
 .DATA
 .DATA?
 .CODE
-qlogicae_test__assembly PROC
+qlogicae_google_test__assembly PROC
 	RET
 
-qlogicae_test__assembly ENDP
+qlogicae_google_test__assembly ENDP
 
 END

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="qlogicae_opera.2632ec51-0d62-473c-9d38-045ff3c25157" Version="1.0.0" Language="en-US" Publisher="QLogicae" />
-        <DisplayName>QLogicae Templates</DisplayName>
-        <Description xml:space="preserve">A set of QLogicae C++ project templates</Description>
+        <Identity Id="qlogicae_opera.2632ec51-0d62-473c-9d38-045ff3c25157" Version="1.1.0" Language="en-US" Publisher="Vaughn Araneta" />
+        <DisplayName>QLogicae Tools</DisplayName>
+        <Description xml:space="preserve">A set of development tools integrated with the QLogicae framework
+
+Notable Items:
+- Project Templates</Description>
+        <MoreInfo>https://github.com/CedricDeVon/qlogicae_opera</MoreInfo>
         <License>LICENSE.txt</License>
         <Icon>application.ico</Icon>
-        <Tags>qlogicae, c, c++</Tags>
+        <PreviewImage>application.ico</PreviewImage>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
@@ -21,6 +25,5 @@
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Console.zip" />
     </Assets>
 </PackageManifest>

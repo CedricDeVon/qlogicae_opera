@@ -24,7 +24,7 @@
     <ProjectGuid>{44da86c5-4612-45cc-b2b8-6ccd143b51fd}</ProjectGuid>
     <RootNamespace>qlogicaestaticlibrary</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>qlogicae_generic_static_library</ProjectName>
+    <ProjectName>qlogicae_vs2022_static_library</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -15,25 +15,38 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="qlogicae\assets\application.ico">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="assembly.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
       <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="qlogicae\documentation\api.md" />
-    <None Include="qlogicae\documentation\collaboration.md" />
-    <None Include="qlogicae\documentation\development.md" />
-    <None Include="qlogicae\documentation\file-system.md" />
-    <None Include="qlogicae\documentation\index.md" />
-    <None Include="qlogicae\documentation\introduction.md" />
-    <None Include="qlogicae\documentation\legalities.md" />
-    <None Include="qlogicae\documentation\project-state.md" />
-    <None Include="qlogicae\documentation\quality-assurance.md" />
-    <None Include="qlogicae\documentation\references.md" />
-    <None Include="qlogicae\documentation\release-notes.md" />
-    <None Include="qlogicae\documentation\security.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="qlogicae\documentation\LICENSE.txt" />
+    </ResourceCompile>
   </ItemGroup>
 </Project>
