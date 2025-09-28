@@ -41,8 +41,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_static_libr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_application", "qlogicae_vs2022_application\qlogicae_vs2022_application.vcxproj", "{F042B00A-C0C7-4E31-AD18-93FC7C4D5502}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_non_application", "qlogicae_vs2022_non_application\qlogicae_vs2022_non_application.vcxproj", "{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_empty", "qlogicae_vs2022_empty\qlogicae_vs2022_empty.vcxproj", "{67C98A82-C5CC-4CEE-A7EC-CA3773778B75}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_nanobench_benchmark", "qlogicae_vs2022_nanobench_benchmark\qlogicae_vs2022_nanobench_benchmark.vcxproj", "{D6698836-46EE-4A77-8BEF-70D4FBBC1BA6}"
@@ -221,22 +219,6 @@ Global
 		{F042B00A-C0C7-4E31-AD18-93FC7C4D5502}.Release|x64.Build.0 = Release|x64
 		{F042B00A-C0C7-4E31-AD18-93FC7C4D5502}.Release|x86.ActiveCfg = Release|Win32
 		{F042B00A-C0C7-4E31-AD18-93FC7C4D5502}.Release|x86.Build.0 = Release|Win32
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|Any CPU.Build.0 = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|arm64.ActiveCfg = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|arm64.Build.0 = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|x64.ActiveCfg = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|x64.Build.0 = Debug|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|x86.ActiveCfg = Debug|Win32
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Debug|x86.Build.0 = Debug|Win32
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|Any CPU.ActiveCfg = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|Any CPU.Build.0 = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|arm64.ActiveCfg = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|arm64.Build.0 = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|x64.ActiveCfg = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|x64.Build.0 = Release|x64
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|x86.ActiveCfg = Release|Win32
-		{21656E45-AE76-4FC5-8EB3-99BC4C9E988C}.Release|x86.Build.0 = Release|Win32
 		{67C98A82-C5CC-4CEE-A7EC-CA3773778B75}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{67C98A82-C5CC-4CEE-A7EC-CA3773778B75}.Debug|Any CPU.Build.0 = Debug|x64
 		{67C98A82-C5CC-4CEE-A7EC-CA3773778B75}.Debug|arm64.ActiveCfg = Debug|x64
