@@ -2,6 +2,8 @@
 
 #include "application.hpp"
 
+#include <windows.h>
+
 int main(int, char**);
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int)

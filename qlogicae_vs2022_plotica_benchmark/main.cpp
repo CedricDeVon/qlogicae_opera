@@ -38,68 +38,75 @@ void selection_sort(std::vector<int> data)
     }
 }
 
-int main(int argc, char** argv)
+int main(int argc, char** argv) 
 {
-    QLogicaePlotica::RuntimePerformanceBenchmarker& benchmarker =
-        QLogicaePlotica::RuntimePerformanceBenchmarker::get_instance();
+    try
+    {
+        QLogicaePlotica::RuntimePerformanceBenchmarker& benchmarker =
+            QLogicaePlotica::RuntimePerformanceBenchmarker::get_instance();
 
-    benchmarker.execute(
-        {
-            .title = "Sorting Algorithms",
-            .gnuplot_type = QLogicaePlotica::BenchmarkerGraph::LINEPLOT,
-            .suspects =
+        benchmarker.execute(
             {
+                .title = "Sorting Algorithms",
+                .gnuplot_type = QLogicaePlotica::BenchmarkerGraph::LINEPLOT,
+                .suspects =
                 {
-                    .title = "Bubble Sort",
-                    .on_setup = [](QLogicaePlotica::BenchmarkerResultData& data)
                     {
-                        std::vector<int> items;
-                        size_t index, size = data.get_input_size();
-                        for (index = 0; index < size; ++index)
+                        .title = "Bubble Sort",
+                        .on_setup = [](QLogicaePlotica::BenchmarkerResultData& data)
                         {
-                            items.push_back(
-                                QLogicaeCore::GENERATOR.random_int(
-                                    1,
-                                    static_cast<int>(size)
-                                )
-                            );
-                        }
-                        data.set_payload(items);
-                    },
-                    .on_execution = [](QLogicaePlotica::BenchmarkerResultData& data)
-                    {
-                        data.set_start_execution_time();
-                        bubble_sort(data.get_payload<std::vector<int>>());
-                        data.set_end_execution_time();
-                    }
-                },
-                {
-                    .title = "Selection Sort",
-                    .on_setup = [](QLogicaePlotica::BenchmarkerResultData& data)
-                    {
-                        std::vector<int> items;
-                        size_t index, size = data.get_input_size();
-                        for (index = 0; index < size; ++index)
+                            std::vector<int> items;
+                            size_t index, size = data.get_input_size();
+                            for (index = 0; index < size; ++index)
+                            {
+                                items.push_back(
+                                    QLogicaeCore::GENERATOR.random_int(
+                                        1,
+                                        static_cast<int>(size)
+                                    )
+                                );
+                            }
+                            data.set_payload(items);
+                        },
+                        .on_execution = [](QLogicaePlotica::BenchmarkerResultData& data)
                         {
-                            items.push_back(
-                                QLogicaeCore::GENERATOR.random_int(
-                                    1,
-                                    static_cast<int>(size)
-                                )
-                            );
+                            data.set_start_execution_time();
+                            bubble_sort(data.get_payload<std::vector<int>>());
+                            data.set_end_execution_time();
                         }
-                        data.set_payload(items);
                     },
-                    .on_execution = [](QLogicaePlotica::BenchmarkerResultData& data)
                     {
-                        data.set_start_execution_time();
-                        selection_sort(data.get_payload<std::vector<int>>());
-                        data.set_end_execution_time();
+                        .title = "Selection Sort",
+                        .on_setup = [](QLogicaePlotica::BenchmarkerResultData& data)
+                        {
+                            std::vector<int> items;
+                            size_t index, size = data.get_input_size();
+                            for (index = 0; index < size; ++index)
+                            {
+                                items.push_back(
+                                    QLogicaeCore::GENERATOR.random_int(
+                                        1,
+                                        static_cast<int>(size)
+                                    )
+                                );
+                            }
+                            data.set_payload(items);
+                        },
+                        .on_execution = [](QLogicaePlotica::BenchmarkerResultData& data)
+                        {
+                            data.set_start_execution_time();
+                            selection_sort(data.get_payload<std::vector<int>>());
+                            data.set_end_execution_time();
+                        }
                     }
                 }
             }
-        }
-    );
+        );
+    }
+    catch (const std::exception& exception)
+    {
+        std::cout << exception.what() << "\n";
+    }
 
     std::cout << "Enter to exit...\n";
 
