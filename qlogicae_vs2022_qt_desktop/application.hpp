@@ -2,17 +2,20 @@
 
 #include "ui_application.h"
 
-namespace QLogicaeQtGUI
+namespace QLogicaeQtDesktop
 {
     class Application : public QMainWindow
     {
         Q_OBJECT
 
     public:
-        Application(QWidget *parent = nullptr);
+        explicit Application(
+            QWidget *parent = nullptr
+        );
+
         ~Application();
 
     private:
-        Ui::ApplicationClass ui;
+        Ui::ApplicationClass* _ui;
     };
 }

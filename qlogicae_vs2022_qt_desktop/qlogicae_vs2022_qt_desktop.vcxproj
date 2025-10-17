@@ -37,12 +37,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>Qt 6.9.1 MSVC</QtInstall>
-    <QtModules>charts;core;datavisualization;gui;multimedia;multimediawidgets;pdf;pdfwidgets;svg;svgwidgets;widgets</QtModules>
+    <QtModules>core;gui;network;widgets;bluetooth;concurrent;opengl;openglwidgets;multimedia;multimediawidgets;svg;svgwidgets;positioning;charts;datavisualization;pdf;pdfwidgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>Qt 6.9.1 MSVC</QtInstall>
-    <QtModules>charts;core;datavisualization;gui;multimedia;multimediawidgets;pdf;pdfwidgets;svg;svgwidgets;widgets</QtModules>
+    <QtModules>core;gui;network;widgets;bluetooth;concurrent;opengl;openglwidgets;multimedia;multimediawidgets;svg;svgwidgets;positioning;charts;datavisualization;pdf;pdfwidgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -96,14 +96,57 @@
       <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Cored.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Guid.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Core.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Gui.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgets.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgetsd.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindows.dll" "$(OutDir)platforms\" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindowsd.dll" "$(OutDir)platforms\" /Y /F</Command>
+      <Command>@echo on
+set QT_DIR=C:\Qt\6.9.1\msvc2022_64
+set OUT_DIR=$(OutDir)
+set LIB_DIR=%OUT_DIR%\bin
+if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
+if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
+
+xcopy "%QT_DIR%\bin\Qt6Cored.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Guid.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Networkd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Widgetsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Bluetoothd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Concurrentd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGLd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGLWidgetsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Multimediad.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6MultimediaWidgetsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Svgd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6SvgWidgetsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Positioningd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Chartsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6DataVisualizationd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Pdfd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6PdfWidgetsd.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\plugins\platforms\qwindowsd.dll" "%OUT_DIR%\platforms\" /Y /F
+
+@echo on
+set QT_DIR=C:\Qt\6.9.1\msvc2022_64
+set OUT_DIR=$(OutDir)
+set LIB_DIR=%OUT_DIR%\bin
+if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
+if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
+
+xcopy "%QT_DIR%\bin\Qt6Core.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Gui.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Network.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Widgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Bluetooth.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Concurrent.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGL.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGLWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Multimedia.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6MultimediaWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Svg.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6SvgWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Positioning.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Charts.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6DataVisualization.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Pdf.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6PdfWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,10 +176,31 @@ xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindowsd.dll" "$(OutDir)platfo
       <AdditionalDependencies>Ole32.lib;qlogicae_core.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Core.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Gui.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\bin\Qt6Widgets.dll" "$(OutDir)" /Y /F
-xcopy "C:\Qt\6.9.1\msvc2022_64\plugins\platforms\qwindows.dll" "$(OutDir)platforms\" /Y /F</Command>
+      <Command>@echo on
+set QT_DIR=C:\Qt\6.9.1\msvc2022_64
+set OUT_DIR=$(OutDir)
+set LIB_DIR=%OUT_DIR%\bin
+if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
+if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
+
+xcopy "%QT_DIR%\bin\Qt6Core.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Gui.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Network.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Widgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Bluetooth.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Concurrent.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGL.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6OpenGLWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Multimedia.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6MultimediaWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Svg.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6SvgWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Positioning.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Charts.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6DataVisualization.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6Pdf.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\bin\Qt6PdfWidgets.dll" "%LIB_DIR%\" /Y /F
+xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
