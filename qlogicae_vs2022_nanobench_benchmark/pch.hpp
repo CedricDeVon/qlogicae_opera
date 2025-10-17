@@ -3,3 +3,8 @@
 #include "qlogicae_core.hpp"
 
 #include <nanobench.h>
+
+namespace QLogicaeNanobenchBenchmark
+{
+
+}

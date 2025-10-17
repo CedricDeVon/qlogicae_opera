@@ -4,7 +4,7 @@
 
 #ifndef x64_MASM_ASSEMBLY
 
-extern "C" void qlogicae_console__assembly();
+extern "C" void qlogicae_console_application__assembly();
 
 #endif
 

@@ -1,6 +1,6 @@
-#include "pch.hpp"
+#pragma once
 
 namespace QLogicaeGoogleTest
 {
-
+	
 }

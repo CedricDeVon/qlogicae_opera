@@ -99,7 +99,7 @@
       <Command>@echo on
 set QT_DIR=C:\Qt\6.9.1\msvc2022_64
 set OUT_DIR=$(OutDir)
-set LIB_DIR=%OUT_DIR%\bin
+set LIB_DIR=%OUT_DIR%
 if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
 if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
 
@@ -125,7 +125,7 @@ xcopy "%QT_DIR%\plugins\platforms\qwindowsd.dll" "%OUT_DIR%\platforms\" /Y /F
 @echo on
 set QT_DIR=C:\Qt\6.9.1\msvc2022_64
 set OUT_DIR=$(OutDir)
-set LIB_DIR=%OUT_DIR%\bin
+set LIB_DIR=%OUT_DIR%
 if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
 if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
 
@@ -179,7 +179,7 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
       <Command>@echo on
 set QT_DIR=C:\Qt\6.9.1\msvc2022_64
 set OUT_DIR=$(OutDir)
-set LIB_DIR=%OUT_DIR%\bin
+set LIB_DIR=%OUT_DIR%
 if not exist "%LIB_DIR%" mkdir "%LIB_DIR%"
 if not exist "%OUT_DIR%\platforms" mkdir "%OUT_DIR%\platforms"
 
