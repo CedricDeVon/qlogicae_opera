@@ -1,10 +1,10 @@
-#include "stdafx.h"
+#include "pch.hpp"
 
 #include "application.hpp"
 
 namespace QLogicaeQtStaticLibrary
 {
-	QLogicaeVS2022QtStaticLibrary::QLogicaeVS2022QtStaticLibrary()
+	Application::Application()
 	{
 
 	}

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "application_global.h"
+#include "application_global.hpp"
 
 namespace QLogicaeQtStaticLibrary
 {
-    class QLOGICAE_VS2022_QT_STATIC_LIBRARY_EXPORT QLogicaeVS2022QtStaticLibrary
+    class QLOGICAE_QT_STATIC_LIBRARY_APPLICATION_EXPORT Application
     {
     public:
-        QLogicaeVS2022QtStaticLibrary();
+        Application();
     };
 }

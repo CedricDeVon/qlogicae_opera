@@ -1,9 +1,9 @@
 #pragma once
 
+#include "assembly.hpp"
+
 #include "qlogicae_core.hpp"
 
-/*
-// Core
 #include <QtCore/QCoreApplication>
 #include <QtCore/QObject>
 #include <QtCore/QVariant>
@@ -32,11 +32,6 @@
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonValue>
 
-// Concurrency
-#include <QtConcurrent/QtConcurrent>
-#include <QtCore/QFutureWatcher>
-
-// GUI
 #include <QtGui/QGuiApplication>
 #include <QtGui/QWindow>
 #include <QtGui/QPixmap>
@@ -53,7 +48,9 @@
 #include <QtGui/QSurfaceFormat>
 #include <QtGui/QOpenGLFunctions>
 
-// Widgets
+#include <QtConcurrent/QtConcurrent>
+#include <QtCore/QFutureWatcher>
+
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QWidget>
@@ -83,7 +80,6 @@
 #include <QtWidgets/QFontDialog>
 #include <QtWidgets/QSystemTrayIcon>
 
-// Network
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkRequest>
 #include <QtNetwork/QNetworkReply>
@@ -94,43 +90,39 @@
 #include <QtNetwork/QNetworkInterface>
 #include <QtNetwork/QSslSocket>
 
-// Bluetooth
 #include <QtBluetooth/QBluetoothDeviceDiscoveryAgent>
 #include <QtBluetooth/QBluetoothLocalDevice>
 #include <QtBluetooth/QBluetoothSocket>
 #include <QtBluetooth/QBluetoothServer>
 #include <QtBluetooth/QBluetoothUuid>
 
-// Multimedia
 #include <QtMultimedia/QMediaPlayer>
 #include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QAudioInput>
 #include <QtMultimedia/QCamera>
 #include <QtMultimedia/QMediaRecorder>
 
-// Multimedia Widgets
 #include <QtMultimediaWidgets/QVideoWidget>
 
-// Positioning
 #include <QtPositioning/QGeoCoordinate>
 #include <QtPositioning/QGeoPositionInfo>
 #include <QtPositioning/QGeoPositionInfoSource>
 
-// OpenGL
 #include <QtOpenGL/QOpenGLShaderProgram>
 #include <QtOpenGL/QOpenGLBuffer>
 #include <QtOpenGL/QOpenGLTexture>
 #include <QtOpenGLWidgets/QOpenGLWidget>
 
-// SVG
 #include <QtSvg/QSvgRenderer>
 #include <QtSvgWidgets/QSvgWidget>
 
-// PDF
 #include <QtPdf/QPdfDocument>
 #include <QtPdfWidgets/QPdfView>
 
-// Print Support
 #include <QtPrintSupport/QPrinter>
 #include <QtPrintSupport/QPrintDialog>
-*/
+
+namespace QLogicaeQtStaticLibrary
+{
+
+}

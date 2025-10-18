@@ -171,17 +171,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="assembly.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.hpp" />
+    <ClInclude Include="assembly.hpp" />
     <ClInclude Include="main.hpp" />
     <ClInclude Include="pch.hpp" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="assembly.asm" />
+    <MASM Include="assembly_main.asm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

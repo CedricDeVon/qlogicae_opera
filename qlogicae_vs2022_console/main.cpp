@@ -2,6 +2,11 @@
 
 #include "main.hpp"
 
+namespace QLogicaeConsole
+{
+
+}
+
 int main(int argc, char** argv)
 {
     std::cout << "Enter to exit...\n";

@@ -2,6 +2,11 @@
 
 #include "application.hpp"
 
+namespace QLogicaeNanobenchBenchmark
+{
+
+}
+
 int main(int, char**);
 
 int WINAPI WinMain(

@@ -4,18 +4,18 @@
 
 namespace QLogicaeQtDesktop
 {
-    class Application : public QMainWindow
+    class Application :
+        public QMainWindow
     {
         Q_OBJECT
 
     public:
-        explicit Application(
-            QWidget *parent = nullptr
+        Application(
+            QWidget* parent = nullptr
         );
-
         ~Application();
 
     private:
-        Ui::ApplicationClass* _ui;
+        Ui::ApplicationClass _ui;
     };
 }

@@ -23,22 +23,35 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="qlogicae_vs2022_qt_static_library_global.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="pch.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClInclude Include="application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="application_global.h">
+    <ClInclude Include="application_global.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="application_global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="assembly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assembly_main.asm">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assembly.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

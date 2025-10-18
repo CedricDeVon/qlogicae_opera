@@ -1,8 +1,12 @@
 #pragma once
 
+#include "assembly.hpp"
+
 #include "qlogicae_core.hpp"
 
-namespace QLogicaeConsoleApplication
+#include <windows.h>
+
+namespace QLogicaeConsole
 {
 
 }

@@ -24,6 +24,9 @@
     <ClInclude Include="application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="assembly.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp">
@@ -32,9 +35,12 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="assembly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="assembly.asm">
+    <MASM Include="assembly_main.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

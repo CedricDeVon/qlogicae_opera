@@ -2,6 +2,11 @@
 
 #include "main.hpp"
 
+namespace QLogicaeNanobenchBenchmark
+{
+
+}
+
 void bubble_sort(std::vector<int> data)
 {
     bool is_swapped = true;

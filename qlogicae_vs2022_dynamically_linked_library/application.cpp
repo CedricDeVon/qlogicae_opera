@@ -2,13 +2,13 @@
 
 #include "application.hpp"
 
-#ifndef x64_MASM_ASSEMBLY
+namespace QLogicaeDynamicallyLinkedLibrary
+{
 
-extern "C" void qlogicae_dynamically_linked_library__assembly();
+}
 
-#endif
-
-BOOL APIENTRY DllMain(HMODULE hModule,
+BOOL APIENTRY DllMain(
+    HMODULE hModule,
     DWORD  ul_reason_for_call,
     LPVOID lpReserved
 )
@@ -22,9 +22,4 @@ BOOL APIENTRY DllMain(HMODULE hModule,
         break;
     }
     return TRUE;
-}
-
-namespace QLogicaeDynamicallyLinkedLibrary
-{
-
 }

@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaeConsoleApplication
+namespace QLogicaeConsole
 {
 
 }

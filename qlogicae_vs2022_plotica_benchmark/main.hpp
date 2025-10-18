@@ -2,8 +2,6 @@
 
 #include "application.hpp"
 
-#include <windows.h>
-
 int main(int, char**);
 
 int WINAPI WinMain(
@@ -14,4 +12,9 @@ int WINAPI WinMain(
 )
 {
     return main(__argc, __argv);
+}
+
+namespace QLogicaePloticaBenchmark
+{
+
 }

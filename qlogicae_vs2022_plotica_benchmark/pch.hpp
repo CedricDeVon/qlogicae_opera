@@ -1,5 +1,7 @@
 #pragma once
 
+#include "assembly.hpp"
+
 #include "qlogicae_core.hpp"
 #include "qlogicae_plotica.hpp"
 
