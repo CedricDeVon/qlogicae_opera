@@ -1,11 +1,6 @@
 #include "pch.hpp"
 
-#include "application.hpp"
-
-namespace QLogicaeDynamicallyLinkedLibrary
-{
-
-}
+#include "../includes/application.hpp"
 
 BOOL APIENTRY DllMain(
     HMODULE hModule,
@@ -22,4 +17,9 @@ BOOL APIENTRY DllMain(
         break;
     }
     return TRUE;
+}
+
+namespace QLogicaeVS2022DynamicallyLinkedLibrary
+{
+
 }

@@ -2,13 +2,10 @@
 
 #include "framework.h"
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
+#include <iostream>
 #include <windows.h>
 
-namespace QLogicaeDynamicallyLinkedLibrary
+namespace QLogicaeVS2022DynamicallyLinkedLibrary
 {
 
 }
