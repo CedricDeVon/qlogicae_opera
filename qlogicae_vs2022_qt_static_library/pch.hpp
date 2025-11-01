@@ -1,9 +1,5 @@
 #pragma once
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
 #include <QtCore/QCoreApplication>
 #include <QtCore/QObject>
 #include <QtCore/QVariant>
@@ -122,7 +118,7 @@
 #include <QtPrintSupport/QPrinter>
 #include <QtPrintSupport/QPrintDialog>
 
-namespace QLogicaeQtStaticLibrary
+namespace QLogicaeVS2022QtStaticLibrary
 {
 
 }

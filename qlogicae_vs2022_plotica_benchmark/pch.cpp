@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaePloticaBenchmark
+namespace QLogicaeVS2022PloticaBenchmark
 {
 
 }

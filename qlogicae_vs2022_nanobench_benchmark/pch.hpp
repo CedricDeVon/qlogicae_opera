@@ -1,14 +1,12 @@
 #pragma once
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
 #include <nanobench.h>
 
+#include <random>
+#include <iostream>
 #include <windows.h>
 
-namespace QLogicaeNanobenchBenchmark
+namespace QLogicaeVS2022NanobenchBenchmark
 {
 
 }

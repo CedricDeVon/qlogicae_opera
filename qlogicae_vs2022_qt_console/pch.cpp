@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaeQtConsole
+namespace QLogicaeVS2022QtConsole
 {
 
 }

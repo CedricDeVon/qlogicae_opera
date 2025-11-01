@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaeQtTest
+namespace QLogicaeVS2022QtTest
 {
 
 }

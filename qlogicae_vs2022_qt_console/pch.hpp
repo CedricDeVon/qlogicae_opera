@@ -1,9 +1,5 @@
 #pragma once
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
 #include <QtCore/QCoreApplication>
 #include <QtCore/QObject>
 #include <QtCore/QVariant>
@@ -124,7 +120,7 @@
 
 #include <windows.h>
 
-namespace QLogicaeQtConsole
+namespace QLogicaeVS2022QtConsole
 {
 
 }

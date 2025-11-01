@@ -2,7 +2,7 @@
 
 #include "main.hpp"
 
-namespace QLogicaeGoogleTest
+namespace QLogicaeVS2022GoogleTest
 {
 	TEST(TestCaseName, TestName)
 	{

@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaeNanobenchBenchmark
+namespace QLogicaeVS2022NanobenchBenchmark
 {
 
 }

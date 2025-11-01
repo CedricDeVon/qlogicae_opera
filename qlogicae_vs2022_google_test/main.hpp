@@ -1,6 +1,8 @@
 #pragma once
 
-namespace QLogicaeGoogleTest
+#include "gtest/gtest.h"
+
+namespace QLogicaeVS2022GoogleTest
 {
 	
 }

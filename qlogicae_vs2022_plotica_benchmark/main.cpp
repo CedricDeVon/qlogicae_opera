@@ -117,7 +117,7 @@ int main(int argc, char** argv)
     return 0;
 }
 
-namespace QLogicaePloticaBenchmark
+namespace QLogicaeVS2022PloticaBenchmark
 {
 
 }

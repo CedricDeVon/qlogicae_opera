@@ -34,13 +34,19 @@
     <ClInclude Include="main.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="application.hpp">
+    <ClInclude Include="qlogicae_vs2022_qt_test\includes\all.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="qlogicae_vs2022_qt_test\includes\application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="assembly.hpp">
+    <ClInclude Include="qlogicae_vs2022_qt_test\includes\assembly.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_qt_test\includes\utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_qt_test\resources\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -48,15 +54,21 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="application.cpp">
+    <ClCompile Include="qlogicae_vs2022_qt_test\sources\all.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assembly.cpp">
+    <ClCompile Include="qlogicae_vs2022_qt_test\sources\application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_qt_test\sources\assembly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_qt_test\sources\utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="assembly_main.asm">
+    <MASM Include="qlogicae_vs2022_qt_test\assembly\x64_masm__main.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
@@ -66,7 +78,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resource.rc">
+    <ResourceCompile Include="qlogicae_vs2022_qt_test\resources\resource.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

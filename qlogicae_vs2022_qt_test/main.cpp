@@ -2,7 +2,7 @@
 
 #include "main.hpp"
 
-namespace QLogicaeQtTest
+namespace QLogicaeVS2022QtTest
 {
     class Main :
         public QObject
@@ -43,5 +43,5 @@ namespace QLogicaeQtTest
     };
 }
 
-QTEST_MAIN(QLogicaeQtTest::Main)
+QTEST_MAIN(QLogicaeVS2022QtTest::Main)
 #include "main.moc"

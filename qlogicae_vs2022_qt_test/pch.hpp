@@ -1,9 +1,5 @@
 #pragma once
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
 #include <QtTest>
 
 #include <QtCore/QCoreApplication>
@@ -124,7 +120,7 @@
 #include <QtPrintSupport/QPrinter>
 #include <QtPrintSupport/QPrintDialog>
 
-namespace QLogicaeQtTest
+namespace QLogicaeVS2022QtTest
 {
 	
 }

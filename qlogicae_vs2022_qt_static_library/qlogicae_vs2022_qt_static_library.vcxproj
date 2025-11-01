@@ -128,7 +128,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
     <ClCompile>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;HASH_LEN=32;PCRE2_CODE_UNIT_WIDTH=8;SALT_LEN=crypto_pwhash_SALTBYTES;_WIN32_WINNT=0x0A00;QLOGICAE_VS2022_QT_CLASS_LIBRARY_LIB;BUILD_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
@@ -148,20 +148,24 @@
     </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="application.hpp" />
-    <ClCompile Include="application.cpp" />
-    <ClInclude Include="application_global.hpp" />
-    <ClInclude Include="assembly.hpp" />
+    <ClCompile Include="qlogicae_vs2022_qt_static_library\sources\all.cpp" />
+    <ClCompile Include="qlogicae_vs2022_qt_static_library\sources\application.cpp" />
+    <ClCompile Include="qlogicae_vs2022_qt_static_library\sources\assembly.cpp" />
+    <ClCompile Include="qlogicae_vs2022_qt_static_library\sources\utilities.cpp" />
+    <ClInclude Include="qlogicae_vs2022_qt_static_library\includes\application_global.hpp" />
     <ClInclude Include="pch.hpp" />
-    <ClCompile Include="application_global.cpp" />
-    <ClCompile Include="assembly.cpp" />
+    <ClCompile Include="qlogicae_vs2022_qt_static_library\sources\application_global.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClInclude Include="qlogicae_vs2022_qt_static_library\includes\all.hpp" />
+    <ClInclude Include="qlogicae_vs2022_qt_static_library\includes\application.hpp" />
+    <ClInclude Include="qlogicae_vs2022_qt_static_library\includes\assembly.hpp" />
+    <ClInclude Include="qlogicae_vs2022_qt_static_library\includes\utilities.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assembly_main.asm" />
+    <None Include="qlogicae_vs2022_qt_static_library\assembly\x64_masm__main.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

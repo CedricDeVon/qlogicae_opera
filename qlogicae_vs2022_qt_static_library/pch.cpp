@@ -1,6 +1,6 @@
 #include "pch.hpp"
 
-namespace QLogicaeQtStaticLibrary
+namespace QLogicaeVS2022QtStaticLibrary
 {
 
 }
