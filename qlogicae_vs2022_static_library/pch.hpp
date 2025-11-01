@@ -1,12 +1,9 @@
 #pragma once
 
-#include "framework.h"
+#include <iostream>
+#include <windows.h>
 
-#include "assembly.hpp"
-
-#include "qlogicae_core.hpp"
-
-namespace QLogicaeStaticLibrary
+namespace QLogicaeVS2022StaticLibrary
 {
 
 }
