@@ -1,8 +1,8 @@
 #include "pch.hpp"
 
-#include "application.hpp"
+#include "../includes/application.hpp"
 
-namespace QLogicaeQtDesktop
+namespace QLogicaeVS2022QtDesktop
 {
     Application::Application(QWidget* parent)
         : QMainWindow(parent)

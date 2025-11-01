@@ -2,17 +2,17 @@
 
 #include "main.hpp"
 
-namespace QLogicaeQtDesktop
-{
-
-}
-
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    QLogicaeQtDesktop::Application window;
+    QLogicaeVS2022QtDesktop::Application window;
     window.show();
     
     return app.exec();
+}
+
+namespace QLogicaeVS2022QtDesktop
+{
+
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -157,7 +157,7 @@
       <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>../../qlogicae_core/qlogicae_core</AdditionalIncludeDirectories>
-      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions101</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
@@ -171,23 +171,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="application.cpp" />
-    <ClCompile Include="assembly.cpp" />
+    <ClCompile Include="qlogicae_vs2022_console\sources\all.cpp" />
+    <ClCompile Include="qlogicae_vs2022_console\sources\application.cpp" />
+    <ClCompile Include="qlogicae_vs2022_console\sources\assembly.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="qlogicae_vs2022_console\sources\utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="application.hpp" />
-    <ClInclude Include="assembly.hpp" />
+    <ClInclude Include="qlogicae_vs2022_console\includes\all.hpp" />
+    <ClInclude Include="qlogicae_vs2022_console\includes\application.hpp" />
+    <ClInclude Include="qlogicae_vs2022_console\includes\assembly.hpp" />
     <ClInclude Include="main.hpp" />
     <ClInclude Include="pch.hpp" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="qlogicae_vs2022_console\includes\utilities.hpp" />
+    <ClInclude Include="qlogicae_vs2022_console\resources\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resource.rc" />
+    <ResourceCompile Include="qlogicae_vs2022_console\resources\resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="assembly_main.asm" />
+    <MASM Include="qlogicae_vs2022_console\assembly\x64_masm__main.asm" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="qlogicae\application\assets\application.ico" />

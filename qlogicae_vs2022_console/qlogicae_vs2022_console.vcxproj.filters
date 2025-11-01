@@ -21,10 +21,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="application.cpp">
+    <ClCompile Include="qlogicae_vs2022_console\sources\application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assembly.cpp">
+    <ClCompile Include="qlogicae_vs2022_console\sources\assembly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_console\sources\utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_console\sources\all.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,23 +41,29 @@
     <ClInclude Include="pch.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="qlogicae_vs2022_console\resources\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="application.hpp">
+    <ClInclude Include="qlogicae_vs2022_console\includes\application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="assembly.hpp">
+    <ClInclude Include="qlogicae_vs2022_console\includes\assembly.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_console\includes\utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_console\includes\all.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resource.rc">
+    <ResourceCompile Include="qlogicae_vs2022_console\resources\resource.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="assembly_main.asm">
+    <MASM Include="qlogicae_vs2022_console\assembly\x64_masm__main.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

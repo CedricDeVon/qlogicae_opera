@@ -1,4 +1,39 @@
 {
     "name": "test",
-    "id": ""
+    "id": "",
+    "language": {
+        "selected": "en"
+    },
+    "time": {
+        "zone": "local"
+    },
+    "log": {
+        "name": "",
+        "is_enabled": false,
+        "is_format_enabled": false,
+        "format": "full_timestamp",
+        "console": {
+            "is_enabled": false,
+            "is_format_enabled": true
+        },
+        "file": {
+            "is_enabled": false,
+            "is_format_enabled": false,
+            "collectivization": {
+                "is_enabled": true,
+                "is_format_enabled": true,
+                "file_name": "all.log"
+            },
+            "fragmentation": {
+                "is_enabled": true,
+                "is_format_enabled": true,
+                "file_name_format": "date_dashed"
+            },
+            "custom": {
+                "is_enabled": false,
+                "is_format_enabled": true,
+                "output_paths": []
+            }
+        }
+    }
 }

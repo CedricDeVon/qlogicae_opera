@@ -1,11 +1,6 @@
 #pragma once
 
-#include "application.hpp"
-
-namespace QLogicaeQtDesktop
-{
-
-}
+#include "qlogicae_vs2022_qt_desktop/includes/application.hpp"
 
 int main(int, char**);
 
@@ -17,4 +12,9 @@ int WINAPI WinMain(
 )
 {
     return main(__argc, __argv);
+}
+
+namespace QLogicaeVS2022QtDesktop
+{
+
 }

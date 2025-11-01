@@ -23,16 +23,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="application.qrc">
+    <QtRcc Include="qlogicae_vs2022_qt_desktop\qt\application.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="application.ui">
+    <QtUic Include="qlogicae_vs2022_qt_desktop\qt\application.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="application.hpp">
+    <QtMoc Include="qlogicae_vs2022_qt_desktop\includes\application.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="application.cpp">
+    <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClInclude Include="pch.hpp">
@@ -46,31 +46,43 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="assembly.cpp">
+    <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\assembly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\all.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="assembly.hpp">
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\includes\assembly.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\includes\all.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\includes\utilities.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resource.rc">
+    <ResourceCompile Include="qlogicae_vs2022_qt_desktop\resources\resource.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assembly_main.asm">
+    <None Include="qlogicae_vs2022_qt_desktop\assembly\x64_masm__main.asm">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

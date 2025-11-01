@@ -2,7 +2,7 @@
 
 #include "ui_application.h"
 
-namespace QLogicaeQtDesktop
+namespace QLogicaeVS2022QtDesktop
 {
     class Application :
         public QMainWindow

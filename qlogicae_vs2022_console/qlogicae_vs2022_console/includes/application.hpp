@@ -1,7 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <windows.h>
+#include "utilities.hpp"
 
 namespace QLogicaeVS2022Console
 {
