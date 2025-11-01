@@ -34,6 +34,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_empty", "qlogicae_vs2022_empty\qlogicae_vs2022_empty.vcxproj", "{67C98A82-C5CC-4CEE-A7EC-CA3773778B75}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_nanobench_benchmark", "qlogicae_vs2022_nanobench_benchmark\qlogicae_vs2022_nanobench_benchmark.vcxproj", "{D6698836-46EE-4A77-8BEF-70D4FBBC1BA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_plotica_benchmark", "qlogicae_vs2022_plotica_benchmark\qlogicae_vs2022_plotica_benchmark.vcxproj", "{074102E4-886E-46DF-A2AE-76C98C3E3BF8}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -42,6 +45,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_plotica_ben
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_dynamically_linked_library", "qlogicae_vs2022_dynamically_linked_library\qlogicae_vs2022_dynamically_linked_library.vcxproj", "{0B2FB70F-432B-41C4-AE55-139576AB62F0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_qt_static_library", "qlogicae_vs2022_qt_static_library\qlogicae_vs2022_qt_static_library.vcxproj", "{9921C369-B2F6-4F6F-9061-130ED9D0E4DE}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -49,6 +55,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_qt_static_l
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_qt_empty", "qlogicae_vs2022_qt_empty\qlogicae_vs2022_qt_empty.vcxproj", "{B78BB8F5-18F9-4ABD-BD7A-26055AB36812}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_vs2022_qt_test", "qlogicae_vs2022_qt_test\qlogicae_vs2022_qt_test.vcxproj", "{FB48FB8F-C446-44E5-8638-46D64AD01D23}"
 	ProjectSection(ProjectDependencies) = postProject

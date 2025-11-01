@@ -2,9 +2,6 @@
 
 #include "qlogicae_vs2022_plotica_benchmark/includes/application.hpp"
 
-#include "qlogicae_core.hpp"
-#include "qlogicae_plotica.hpp"
-
 int main(int, char**);
 
 int WINAPI WinMain(
