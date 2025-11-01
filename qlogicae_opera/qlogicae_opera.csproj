@@ -49,42 +49,20 @@
     <Compile Include="qlogicae_operaPackage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProjectTemplates\QLogicae Application.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Console.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Empty.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Google Test.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Nanobench Benchmark.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Plotica Benchmark.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Qt Desktop.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Sandbox.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\QLogicae Static Library.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    <None Include="ProjectTemplates\QLogicae Application.zip" />
+    <None Include="ProjectTemplates\QLogicae Console.zip" />
+    <None Include="ProjectTemplates\QLogicae Dynamically Linked Library.zip" />
+    <None Include="ProjectTemplates\QLogicae Empty.zip" />
+    <None Include="ProjectTemplates\QLogicae Google Test.zip" />
+    <None Include="ProjectTemplates\QLogicae Nanobench Benchmark.zip" />
+    <None Include="ProjectTemplates\QLogicae Plotica Benchmark.zip" />
+    <None Include="ProjectTemplates\QLogicae Qt Console.zip" />
+    <None Include="ProjectTemplates\QLogicae Qt Desktop.zip" />
+    <None Include="ProjectTemplates\QLogicae Qt Empty.zip" />
+    <None Include="ProjectTemplates\QLogicae Qt Static Library.zip" />
+    <None Include="ProjectTemplates\QLogicae Qt Test.zip" />
+    <None Include="ProjectTemplates\QLogicae Sandbox.zip" />
+    <None Include="ProjectTemplates\QLogicae Static Library.zip" />
     <None Include="qlogicae_opera.vsix" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
