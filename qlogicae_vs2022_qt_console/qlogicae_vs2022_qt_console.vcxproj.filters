@@ -61,7 +61,7 @@
     <ClInclude Include="qlogicae_vs2022_qt_console\includes\utilities.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qlogicae_vs2022_qt_console\resources\resource.h">
+    <ClInclude Include="qlogicae_vs2022_qt_console\resources\application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,13 +71,13 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_qt_console\resources\resource.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <MASM Include="qlogicae_vs2022_qt_console\assembly\x64_masm__main.asm">
       <Filter>Source Files</Filter>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="qlogicae_vs2022_qt_console\resources\application.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -187,10 +187,10 @@
     <ClInclude Include="main.hpp" />
     <ClInclude Include="pch.hpp" />
     <ClInclude Include="qlogicae_vs2022_console\includes\utilities.hpp" />
-    <ClInclude Include="qlogicae_vs2022_console\resources\resource.h" />
+    <ClInclude Include="qlogicae_vs2022_console\resources\application.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_console\resources\resource.rc" />
+    <ResourceCompile Include="qlogicae_vs2022_console\resources\application.rc" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="qlogicae_vs2022_console\assembly\x64_masm__main.asm" />

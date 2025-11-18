@@ -57,10 +57,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource.h">
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource1.h">
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\application1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main.hpp">
@@ -77,7 +77,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_qt_desktop\resources\resource.rc">
+    <ResourceCompile Include="qlogicae_vs2022_qt_desktop\resources\application.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

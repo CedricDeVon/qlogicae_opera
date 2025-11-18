@@ -2,15 +2,16 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="qlogicae_opera.2632ec51-0d62-473c-9d38-045ff3c25157" Version="1.2.0" Language="en-US" Publisher="Vaughn Cedric L. Araneta" />
-        <DisplayName>QLogicae Tools</DisplayName>
-        <Description xml:space="preserve">Includes a collection of development tools integrated with the QLogicae framework
+        <DisplayName>QLogicae Opera</DisplayName>
+        <Description xml:space="preserve">Includes a collection of software development tools integrated with the QLogicae framework
 
-Notable Items:
-- Project Templates</Description>
+Core Features:
+- C++ Project Templates</Description>
         <MoreInfo>https://github.com/CedricDeVon/qlogicae_opera</MoreInfo>
         <License>LICENSE.txt</License>
         <Icon>application.ico</Icon>
         <PreviewImage>application.ico</PreviewImage>
+        <Tags>qlogicae,templates,qt,console,desktop,tests,benchmarks</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
@@ -22,17 +23,9 @@ Notable Items:
     </Dependencies>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.Vcpkg" Version="[17.14.36015.10,18.0)" DisplayName="vcpkg package manager" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Application.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Console.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Empty.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Google Test.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Nanobench Benchmark.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Plotica Benchmark.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Qt Desktop.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Sandbox.zip" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\QLogicae Static Library.zip" />
     </Assets>
 </PackageManifest>

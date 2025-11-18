@@ -240,8 +240,8 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
     <ClInclude Include="qlogicae_vs2022_qt_test\includes\application.hpp" />
     <ClInclude Include="qlogicae_vs2022_qt_test\includes\assembly.hpp" />
     <ClInclude Include="qlogicae_vs2022_qt_test\includes\utilities.hpp" />
-    <ClInclude Include="qlogicae_vs2022_qt_test\resources\resource.h" />
     <ClInclude Include="pch.hpp" />
+    <ClInclude Include="qlogicae_vs2022_qt_test\resources\application.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -259,7 +259,7 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
     <Image Include="qlogicae\application\assets\application.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_qt_test\resources\resource.rc" />
+    <ResourceCompile Include="qlogicae_vs2022_qt_test\resources\application.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

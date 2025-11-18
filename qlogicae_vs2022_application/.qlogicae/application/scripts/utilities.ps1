@@ -109,7 +109,7 @@ class QLogicaeApplicationUtilities {
         [string]$InputFolderPath,
         [string]$OutputFolderPath
     ) {
-        Write-Host "> Inno Setup Deployment Begins"
+        Write-Host "> Inno Setup Deployment Starts"
             
         $this.SetupInnoSetupTargetFile(
             $EnvironmentType
@@ -148,12 +148,12 @@ class QLogicaeApplicationUtilities {
             /DMyAppVersion="$($DotQLogicaeTemplateDefaultApplicationFile.version)" `
             /DMyAppPublisher="$($DotQLogicaeTemplateDefaultApplicationFile.company)" `
             /DMyAppURL="$($DotQLogicaeTemplateDefaultApplicationFile.url)" `
-            /DMyAppExeName="$($ProjectName)" `
+            /DMyAppExeName="$($DotQLogicaePrivateApplicationFile.application.executable_name)" `
             /DMyLicenseFile="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($InputFolderPath)\\$($this.Configurations.RelativeBuildQLogicaeApplicationDocumentationLicenseFilePath)" `
             /DMyOutputBaseFilename="$($DotQLogicaeTemplateDefaultApplicationFile.name)_$($DotQLogicaeTemplateDefaultApplicationFile.version)_$($DotQLogicaeTemplateDefaultApplicationFile.architecture)_Setup" `
             /DMySetupIconFile="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($InputFolderPath)\\$($this.Configurations.RelativeBuildQLogicaeApplicationAssetsApplicationFilePath)" `
             /DMyOutputDir="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($OutputFolderPath)" `
-            /DMyAppExeSource="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($InputFolderPath)\\$($ProjectName).exe" `
+            /DMyAppExeSource="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($InputFolderPath)\\$($DotQLogicaePrivateApplicationFile.application.executable_name).exe" `
             /DMyAppFolderSource="$($this.Configurations.FullQLogicaeSolutionRootFolderPath)\\$($InputFolderPath)" `
             /DMyAppPrivilegesRequired="$($DotQLogicaePrivateApplicationFile.inno_setup.privileges_required)" `
             "$($this.Configurations.FullDotQLogicaeApplicationScriptsInnoSetupTargetFilePath)" `
@@ -302,7 +302,7 @@ class QLogicaeApplicationUtilities {
         [string]$VisualStudio2022InputProject,
         [string]$VisualStudio2022StartupProject) {
         try {
-            Write-Host "> Visual Studio 2022 Build Begins"
+            Write-Host "> Visual Studio 2022 Build Starts"
 
             $this.SetupWindowsRegistry($EnvironmentType)
             
@@ -326,6 +326,18 @@ class QLogicaeApplicationUtilities {
                 $VisualStudio2022Build,
                 $VisualStudio2022InputProject
             )            
+
+            $this.RenameVisualStudio2022Executable(
+                $VisualStudio2022Architecture,
+                $VisualStudio2022Build,
+                $VisualStudio2022InputProject
+            )         
+
+            $this.OrganizeVisualStudio2022BuildFolder(
+                $VisualStudio2022Architecture,
+                $VisualStudio2022Build,
+                $VisualStudio2022InputProject
+            )            
             
             Write-Host "> Visual Studio 2022 Build Complete"
         
@@ -336,19 +348,148 @@ class QLogicaeApplicationUtilities {
         }        
     }
     
+    [void] RenameVisualStudio2022Executable(
+        [string]$VisualStudio2022Architecture,
+        [string]$VisualStudio2022Build,
+        [string]$VisualStudio2022InputProject) {
+        try {
+            Write-Host "> Renaming Visual Studio 2022 Executable Starts"
+            
+            $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
+            $DotQLogicaeTemplateDefaultApplicationFile = $this.GetJSONObject("$($this.Configurations.FullDotQLogicaeApplicationTemplatesFolderPath)\\default\\build\\$($this.Configurations.RelativeBuildQLogicaeApplicationConfigurationsQLogicaeFilePath)")
+        
+            $QLogicaeInputBuildProjectPath = $this.GetVisualStudio2022QLogicaeInputBuildProjectPath(
+                    $VisualStudio2022Architecture,
+                    $VisualStudio2022Build,
+                    $VisualStudio2022InputProject
+                )
+
+            $OldExecutablePath = "$($QLogicaeInputBuildProjectPath)\\$($VisualStudio2022InputProject).exe"
+            $NewExecutablePath = "$($QLogicaeInputBuildProjectPath)\\$($DotQLogicaePrivateApplicationFile.application.executable_name).exe"
+
+            if (!(Test-Path $OldExecutablePath)) {
+                Write-Host "> Renaming Visual Studio 2022 Executable Skipped. Executable '$($VisualStudio2022InputProject).exe' not found"
+            
+                return
+            }
+
+            if (-not $DotQLogicaePrivateApplicationFile.build.is_executable_renaming_enabled) {
+                Write-Host "> Renaming Visual Studio 2022 Executable Skipped. 'build.is_executable_renaming_enabled' is set to false"
+            
+                return
+            }           
+
+            Copy-Item $OldExecutablePath -Force $NewExecutablePath
+            Remove-Item $OldExecutablePath
+
+            Write-Host "> Renaming Visual Studio 2022 Executable Complete"    
+            
+        } catch {
+            Write-Error "> Exception at QLogicaeApplicationUtilities::RenameVisualStudio2022Executable()"
+
+            exit
+        }        
+     }
+    
+    [void] OrganizeVisualStudio2022BuildFolder(
+        [string]$VisualStudio2022Architecture,
+        [string]$VisualStudio2022Build,
+        [string]$VisualStudio2022InputProject) {
+        try {
+            Write-Host "> Organizing Visual Studio 2022 Build Folder Starts"
+
+            $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
+            $QLogicaeInputBuildProjectPath = $this.GetVisualStudio2022QLogicaeInputBuildProjectPath(
+                $VisualStudio2022Architecture,
+                $VisualStudio2022Build,
+                $VisualStudio2022InputProject
+            )
+            
+            if (-not $DotQLogicaePrivateApplicationFile.build.is_organization_enabled) {
+                Write-Host "> Organizing Visual Studio 2022 Build Folder Skipped. 'build.is_organization_enabled' is set to false"
+            
+                return
+            }
+            
+            $this.OrganizeVisualStudio2022BuildBinFolder(
+                $QLogicaeInputBuildProjectPath
+            )           
+            $this.OrganizeVisualStudio2022BuildSymbolFolder(
+                $QLogicaeInputBuildProjectPath
+            )           
+            
+            Write-Host "> Organizing Visual Studio 2022 Build Folder Complete"    
+            
+        } catch {
+            Write-Error "> Exception at QLogicaeApplicationUtilities::ClearVisualStudio2022BuildFolder()"
+
+            exit
+        }
+    }
+
+    [void] OrganizeVisualStudio2022BuildBinFolder(
+        [string]$Path) {
+        try {
+            Write-Host "> Organizing Visual Studio 2022 Build Bin Folder Starts"
+            
+            $BuildBinaryFolder = Join-Path $Path "bin"
+            if (!(Test-Path $BuildBinaryFolder)) {
+                New-Item -ItemType Directory -Path $BuildBinaryFolder | Out-Null
+            }
+
+            Get-ChildItem -Path $Path -Filter *.dll | Where-Object {
+                $_.Name
+            } | ForEach-Object {
+                Write-Host "Moving $($_.Name)"
+                Move-Item -Force $_.FullName $BuildBinaryFolder
+            }
+
+            Write-Host "> Organizing Visual Studio 2022 Build Bin Folder Complete"    
+            
+        } catch {
+            Write-Error "> Exception at QLogicaeApplicationUtilities::OrganizeVisualStudio2022BuildBinFolder()"
+
+            exit
+        }
+    }
+
+    [void] OrganizeVisualStudio2022BuildSymbolFolder(
+        [string]$Path) {
+        try {
+            Write-Host "> Organizing Visual Studio 2022 Build Symbol Folder Starts"
+            
+            $BuildSymbolFolder = Join-Path $Path "symbols"
+            if (!(Test-Path $BuildSymbolFolder)) {
+                New-Item -ItemType Directory -Path $BuildSymbolFolder | Out-Null
+            }
+
+            Get-ChildItem -Path $Path -Filter *.pdb | ForEach-Object {
+                Write-Host "Moving $($_.Name)"
+                Move-Item -Force $_.FullName $BuildSymbolFolder
+            }
+
+            Write-Host "> Organizing Visual Studio 2022 Build Symbol Folder Complete"    
+            
+        } catch {
+            Write-Error "> Exception at QLogicaeApplicationUtilities::OrganizeVisualStudio2022BuildSymbolFolder()"
+
+            exit
+        }
+    }
+
     [void] ClearVisualStudio2022BuildFolder(
         [string]$VisualStudio2022Architecture,
         [string]$VisualStudio2022Build,
         [string]$VisualStudio2022InputProject) {
         try {
-            Write-Host "> Clearing Visual Studio 2022 Build Folder Begins"
+            Write-Host "> Clearing Visual Studio 2022 Build Folder Starts"
             
             $QLogicaeInputBuildProjectPath = $this.GetVisualStudio2022QLogicaeInputBuildProjectPath(
                 $VisualStudio2022Architecture,
                 $VisualStudio2022Build,
                 $VisualStudio2022InputProject
             )
-
+            
             if (-not (Test-Path $QLogicaeInputBuildProjectPath)) {
                 $this.CreateFolderTree($QLogicaeInputBuildProjectPath)
             
@@ -376,7 +517,7 @@ class QLogicaeApplicationUtilities {
             $VisualStudio2022InputProject
         )
         try {
-            Write-Host "> Visual Studio 2022 Build Code Begins"
+            Write-Host "> Visual Studio 2022 Build Code Starts"
 
             
             & "$($DotQLogicaePrivateApplicationFile.visual_studio_2022.full_devenv_executable_path)" `
@@ -400,7 +541,7 @@ class QLogicaeApplicationUtilities {
         [string]$VisualStudio2022Build,
         [string]$VisualStudio2022InputProject) {
         try {
-            Write-Host "> Visual Studio 2022 Template File System Setup Begins"
+            Write-Host "> Visual Studio 2022 Template File System Setup Starts"
 
             $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
             $QLogicaeInputBuildProjectPath = $this.GetVisualStudio2022QLogicaeInputBuildProjectPath(
@@ -453,7 +594,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupWindowsRegistryHKCU(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Windows Registry HKCU Setup Begins"
+            Write-Host "> Windows Registry HKCU Setup Starts"
 
             $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
 
@@ -500,7 +641,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupWindowsRegistryHKLM(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Windows Registry HKLM Setup Begins"
+            Write-Host "> Windows Registry HKLM Setup Starts"
 
             $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
         
@@ -548,7 +689,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupEnvironmentVariablesUser(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Environment Variables User Setup Begins"
+            Write-Host "> Environment Variables User Setup Starts"
             
             $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
 
@@ -568,7 +709,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupEnvironmentVariablesSystem(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Environment Variables System Setup Begins"
+            Write-Host "> Environment Variables System Setup Starts"
 
             $DotQLogicaePrivateApplicationFile = $this.GetDotQLogicaePrivateApplicationJSON()
 
@@ -660,7 +801,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupWindowsRegistry(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Windows Registry Setup Begins"
+            Write-Host "> Windows Registry Setup Starts"
 
             $this.SetupWindowsRegistryHKCU($EnvironmentType)
             $this.SetupWindowsRegistryHKLM($EnvironmentType)
@@ -675,6 +816,7 @@ class QLogicaeApplicationUtilities {
     }
     [void] ViewEnvironmentVariables(
         [string]$RootPath) {
+
         try {
             $FullPath = ""
             if ($RootPath -eq "user") {
@@ -742,7 +884,7 @@ class QLogicaeApplicationUtilities {
     [void] SetupEnvironmentVariables(
         [string]$EnvironmentType) {
         try {
-            Write-Host "> Environment Variables Setup Begins"
+            Write-Host "> Environment Variables Setup Starts"
 
             $this.SetupEnvironmentVariablesUser($EnvironmentType)
             $this.SetupEnvironmentVariablesSystem($EnvironmentType)
@@ -758,6 +900,7 @@ class QLogicaeApplicationUtilities {
 
     [void] DisplayWindowsRegistryKeyValuePairs(
         [string]$Path) {
+
         try {                        
             Get-ItemProperty -Path $Path | ForEach-Object {
                 $_.PSObject.Properties | ForEach-Object {
@@ -1004,7 +1147,7 @@ class QLogicaeApplicationUtilities {
     [void] RemoveFile(
         [string]$OriginalPath) {
         try {
-            Remove-Item $OriginalPath -Force
+            Remove-Item $OriginalPath
         
         } catch {
             Write-Error "> Exception at QLogicaeApplicationUtilities::RemoveFile(): Failed to remove '$OriginalPath'"
@@ -1020,7 +1163,7 @@ class QLogicaeApplicationUtilities {
                 return
             }
         
-            Get-ChildItem -Path $Path -Recurse -Force | Remove-Item -Recurse
+            Get-ChildItem -Path $Path -Recurse | Remove-Item -Recurse
         
         } catch {
             Write-Error "> Exception at QLogicaeApplicationUtilities::ClearFolder(): Failed to clear '$Path'"

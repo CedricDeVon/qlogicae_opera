@@ -19,6 +19,7 @@
 ![IDE](https://img.shields.io/badge/IDE-VS2022-purple)
 
 ![x64](https://img.shields.io/badge/Architecture-x64-yellow)
+![C](https://img.shields.io/badge/Language-C-white)
 ![C++20](https://img.shields.io/badge/Language-C++20-white)
 
   </div>
@@ -59,15 +60,9 @@
 <p>
   QLogicae Opera helps to provide a set of tools for developing C++ applications integrated with the QLogicae framework as a Visual Studio 2022 Extension.
 </p>
-<h3 id="about-purpose">
-  🧾 Purpose
-</h3>
 <p>
   As a development tool, it aims to improve C++ development speed via project templates and more - calling for more performant methods in C++ application development.
 </p>
-<h3 id="about-users">
-  🧾 Users
-</h3>
 <div>
   <p>This extension is primarily best suited for:</p>
   <ol>
@@ -85,15 +80,15 @@
   <li>    
     <h3>Project Templates</h3>
     <ul>
-      <li><p>QLogicae Root Folder</p></li>
-      <li><p>QLogicae-Qt Integrated</p></li>
+      <li><p>QLogicae Application Folder</p></li>
+      <li><p>QLogicae-Qt Integrations</p></li>
       <li><p>Console Applications</p></li>
       <li><p>Desktop Applications</p></li>
       <li><p>Static Libraries</p></li>
       <li><p>Dynamically-Linked Libraries</p></li>
-      <li><p>Benchmarkers</p></li>
-      <li><p>Unit Tests</p></li>
-      <li><p>Experimentations</p></li>
+      <li><p>Benchmarker Console Applications</p></li>
+      <li><p>Unit Testing Console Applications</p></li>
+      <li><p>"Sandbox" Applications</p></li>
       <li><p>And More</p></li>
     </ul>
   </li>
@@ -111,9 +106,12 @@
 </h3>
 <p>
   <ul>
-    <li><p>Operating System - Windows</p></li>
+    <li><p>Operating System - Windows 10 (Or Higher)</p></li>
     <li><p>System Architecture - x64</p></li>
-    <li><p>Visual Studio 2022 Version - 17.14.3 (Or Higher)</p></li>
+    <li><p>Visual Studio 2022 - 17.14.3 (Or Higher)</p></li>
+    <li><p>Vcpkg - 2025-05-19-ece4c0f6b8fae9e94513d544c7aa753dd2c82337 (Or Higher)</p></li>
+    <li><p>PowerShell - 7.9.3.0 (Or Higher)</p></li>
+    <li><p>Qt - 4.9.0 (Or Higher)</p></li>
   </ul>
 </p>
 
@@ -125,8 +123,8 @@
   🗂️ Extended Documentation
 </h2>
 <p>
-  Here is a link if you would like to know more about the project:
+  If you would like to know more, here's the link below:
 </p>
-<a href="./qlogicae/qlogicae/documentation/index.md">🔗 Navigate To Page</a>
+<a href="./qlogicae/qlogicae/documentation/index.md">🔗 Navigate</a>
 
 </br>

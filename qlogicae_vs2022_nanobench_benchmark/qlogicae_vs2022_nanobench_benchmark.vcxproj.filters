@@ -53,7 +53,7 @@
     <ClInclude Include="qlogicae_vs2022_nanobench_benchmark\includes\utilities.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qlogicae_vs2022_nanobench_benchmark\resources\resource.h">
+    <ClInclude Include="qlogicae_vs2022_nanobench_benchmark\resources\application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,7 +68,7 @@
     </MASM>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_nanobench_benchmark\resources\resource.rc">
+    <ResourceCompile Include="qlogicae_vs2022_nanobench_benchmark\resources\application.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

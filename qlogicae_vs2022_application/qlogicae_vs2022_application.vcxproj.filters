@@ -15,7 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="qlogicae\documentation\security.md" />
     <None Include=".qlogicae\application\configurations\qlogicae.json" />
     <None Include=".qlogicae\application\scripts\environment_variables\get.ps1" />
     <None Include=".qlogicae\application\scripts\environment_variables\set.ps1" />
@@ -53,16 +52,18 @@
     <None Include=".qlogicae\application\templates\test\environment_variables\user.json" />
     <None Include=".qlogicae\application\templates\test\windows_registry\hkcu.json" />
     <None Include=".qlogicae\application\templates\test\windows_registry\hklm.json" />
-    <None Include="qlogicae\documentation\api.md" />
-    <None Include="qlogicae\documentation\collaboration.md" />
-    <None Include="qlogicae\documentation\development.md" />
-    <None Include="qlogicae\documentation\file-system.md" />
+    <None Include="qlogicae\documentation\1.0.0\api.md" />
+    <None Include="qlogicae\documentation\1.0.0\collaboration.md" />
+    <None Include="qlogicae\documentation\1.0.0\development.md" />
+    <None Include="qlogicae\documentation\1.0.0\file-system.md" />
+    <None Include="qlogicae\documentation\1.0.0\index.md" />
+    <None Include="qlogicae\documentation\1.0.0\introduction.md" />
+    <None Include="qlogicae\documentation\1.0.0\legalities.md" />
+    <None Include="qlogicae\documentation\1.0.0\project-state.md" />
+    <None Include="qlogicae\documentation\1.0.0\quality-assurance.md" />
+    <None Include="qlogicae\documentation\1.0.0\references.md" />
+    <None Include="qlogicae\documentation\1.0.0\security.md" />
     <None Include="qlogicae\documentation\index.md" />
-    <None Include="qlogicae\documentation\introduction.md" />
-    <None Include="qlogicae\documentation\legalities.md" />
-    <None Include="qlogicae\documentation\project-state.md" />
-    <None Include="qlogicae\documentation\quality-assurance.md" />
-    <None Include="qlogicae\documentation\references.md" />
     <None Include="qlogicae\documentation\release-notes.md" />
   </ItemGroup>
   <ItemGroup>

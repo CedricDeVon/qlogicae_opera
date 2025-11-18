@@ -1,6 +1,7 @@
 {
     "application": {
         "startup_project_name": "",
+        "executable_name": "",
         "is_administration_access_required": false,
         "license_file_path": "qlogicae\\application\\documentation\\LICENSE.txt",
         "icon_file_path": "qlogicae\\application\\assets\\application.ico",
@@ -24,6 +25,10 @@
     },
     "scripts": {
         "sample": "echo sample"
+    },
+    "build": {
+        "is_organization_enabled": false,
+        "is_executable_renaming_enabled": true
     },
     "visual_studio_2022": {
         "full_devenv_executable_path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.com"

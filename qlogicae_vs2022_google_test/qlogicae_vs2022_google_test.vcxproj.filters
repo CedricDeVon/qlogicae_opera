@@ -15,7 +15,7 @@
     <ClInclude Include="qlogicae_vs2022_google_test\includes\application.hpp" />
     <ClInclude Include="qlogicae_vs2022_google_test\includes\assembly.hpp" />
     <ClInclude Include="qlogicae_vs2022_google_test\includes\utilities.hpp" />
-    <ClInclude Include="qlogicae_vs2022_google_test\resources\resource.h" />
+    <ClInclude Include="qlogicae_vs2022_google_test\resources\application.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -32,6 +32,6 @@
     <MASM Include="qlogicae_vs2022_google_test\assembly\x64_masm__main.asm" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_google_test\resources\resource.rc" />
+    <ResourceCompile Include="qlogicae_vs2022_google_test\resources\application.rc" />
   </ItemGroup>
 </Project>

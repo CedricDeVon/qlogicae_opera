@@ -242,8 +242,8 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
     <ClInclude Include="qlogicae_vs2022_qt_desktop\includes\assembly.hpp" />
     <ClInclude Include="main.hpp" />
     <ClInclude Include="qlogicae_vs2022_qt_desktop\includes\utilities.hpp" />
-    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource.h" />
-    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\resource1.h" />
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\application.h" />
+    <ClInclude Include="qlogicae_vs2022_qt_desktop\resources\application1.h" />
     <ClInclude Include="pch.hpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">Create</PrecompiledHeader>
@@ -251,7 +251,7 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="qlogicae_vs2022_qt_desktop\resources\resource.rc" />
+    <ResourceCompile Include="qlogicae_vs2022_qt_desktop\resources\application.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="qlogicae_vs2022_qt_desktop\assembly\x64_masm__main.asm" />
