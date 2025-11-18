@@ -1,4 +1,4 @@
-
+﻿
 </br>
 
 <div style="width: 100%; display: flex; justify-content: center;">
@@ -14,7 +14,7 @@
   <p style="font-style: italic;"></p>
   <div style="margin: 32px 64px;">
     
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Version](https://img.shields.io/badge/Version-1.1.0-green)
 ![Windows](https://img.shields.io/badge/OS-Windows-blue)
 ![IDE](https://img.shields.io/badge/IDE-VS2022-purple)
 
@@ -80,17 +80,21 @@
 </h3>
 <ul>
   <li>
+    <h3>Visual Studio 2022 Extension</h3>
+  </li>
+  <li>    
     <h3>Project Templates</h3>
     <ul>
-      <li><p>QLogicae Empty</p></li>
-      <li><p>QLogicae Application</p></li>
-      <li><p>QLogicae Static Library</p></li>
-      <li><p>QLogicae Console</p></li>
-      <li><p>QLogicae Qt Desktop</p></li>
-      <li><p>QLogicae Sandbox</p></li>
-      <li><p>QLogicae Plotica Benchmark</p></li>
-      <li><p>QLogicae Nanobench Benchmark</p></li>
-      <li><p>QLogicae Google Test</p></li>
+      <li><p>QLogicae Root Folder</p></li>
+      <li><p>QLogicae-Qt Integrated</p></li>
+      <li><p>Console Applications</p></li>
+      <li><p>Desktop Applications</p></li>
+      <li><p>Static Libraries</p></li>
+      <li><p>Dynamically-Linked Libraries</p></li>
+      <li><p>Benchmarkers</p></li>
+      <li><p>Unit Tests</p></li>
+      <li><p>Experimentations</p></li>
+      <li><p>And More</p></li>
     </ul>
   </li>
 </ul>
@@ -107,12 +111,9 @@
 </h3>
 <p>
   <ul>
-    <li><p>Operating System - Windows</p>
-    </li>
-    <li><p>System Architecture - x64</p>
-    </li>
-    <li><p>Visual Studio 2022 Version - 17.14.3 (Or Higher)</p>
-    </li>
+    <li><p>Operating System - Windows</p></li>
+    <li><p>System Architecture - x64</p></li>
+    <li><p>Visual Studio 2022 Version - 17.14.3 (Or Higher)</p></li>
   </ul>
 </p>
 
@@ -126,6 +127,6 @@
 <p>
   Here is a link if you would like to know more about the project:
 </p>
-<a href="./qlogicae/qlogicae/documentation/index.md">🔗 Navigate</a>
+<a href="./qlogicae/qlogicae/documentation/index.md">🔗 Navigate To Page</a>
 
 </br>
