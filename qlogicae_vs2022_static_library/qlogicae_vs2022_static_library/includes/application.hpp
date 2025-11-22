@@ -2,7 +2,7 @@
 
 #include "utilities.hpp"
 
-#include "qlogicae_core/includes/cli_io.hpp"
+#include "qlogicae_core/includes/all.hpp"
 
 namespace QLogicaeVS2022StaticLibrary
 {

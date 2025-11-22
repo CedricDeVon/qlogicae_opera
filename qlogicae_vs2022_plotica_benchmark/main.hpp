@@ -2,7 +2,7 @@
 
 #include "qlogicae_vs2022_plotica_benchmark/includes/application.hpp"
 
-#include "qlogicae_core/includes/cli_io.hpp"
+#include "qlogicae_core/includes/all.hpp"
 
 int main(int, char**);
 
