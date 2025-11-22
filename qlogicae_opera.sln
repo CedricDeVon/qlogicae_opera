@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qlogicae_plotica", "..\qlog
 		{07F44EB2-776B-4BB0-B462-589523A3D3F3} = {07F44EB2-776B-4BB0-B462-589523A3D3F3}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qlogicae_vs2022_console_template", "qlogicae_vs2022_console_template\qlogicae_vs2022_console_template.csproj", "{99A3979F-8562-4B55-A5C8-EBE23AF52326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -379,6 +381,22 @@ Global
 		{BD70CBB4-BA38-4F14-AA9A-8C501C946245}.Release|x64.Build.0 = Release|x64
 		{BD70CBB4-BA38-4F14-AA9A-8C501C946245}.Release|x86.ActiveCfg = Release|Win32
 		{BD70CBB4-BA38-4F14-AA9A-8C501C946245}.Release|x86.Build.0 = Release|Win32
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|arm64.Build.0 = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|x64.Build.0 = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Debug|x86.Build.0 = Debug|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|arm64.ActiveCfg = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|arm64.Build.0 = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|x64.ActiveCfg = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|x64.Build.0 = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|x86.ActiveCfg = Release|Any CPU
+		{99A3979F-8562-4B55-A5C8-EBE23AF52326}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

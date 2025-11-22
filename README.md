@@ -11,16 +11,19 @@
 
 <div style="text-align: center;">
   <h1>QLogicae Opera</h1>
-  <p style="font-style: italic;"></p>
-  <div style="margin: 32px 64px;">
+  <p style="font-style: italic;">Hassle without</p>
+<div style="margin: 32px 64px;">
     
-![Version](https://img.shields.io/badge/Version-1.1.0-green)
+![Version](https://img.shields.io/badge/Version-1.2.0-blue)
 ![Windows](https://img.shields.io/badge/OS-Windows-blue)
 ![IDE](https://img.shields.io/badge/IDE-VS2022-purple)
 
+![GTest](https://img.shields.io/badge/GTest-99.15%-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-red)
+
 ![x64](https://img.shields.io/badge/Architecture-x64-yellow)
 ![C](https://img.shields.io/badge/Language-C-white)
-![C++20](https://img.shields.io/badge/Language-C++20-white)
+![C++](https://img.shields.io/badge/Language-C++20-white)
 
   </div>
 </div>
@@ -123,7 +126,7 @@
   🗂️ Extended Documentation
 </h2>
 <p>
-  If you would like to know more, here's the link below:
+  If you would like to know more, click the link below:
 </p>
 <a href="./qlogicae/qlogicae/documentation/index.md">🔗 Navigate</a>
 

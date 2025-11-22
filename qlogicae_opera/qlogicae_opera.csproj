@@ -58,14 +58,16 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="ProjectTemplates\QLogicae Dynamically-Linked Library.zip" />
-    <None Include="ProjectTemplates\QLogicae Empty.zip" />
+    <Content Include="ProjectTemplates\QLogicae Empty.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ProjectTemplates\QLogicae Google Test.zip" />
     <None Include="ProjectTemplates\QLogicae Nanobench Benchmark.zip" />
     <None Include="ProjectTemplates\QLogicae Plotica Benchmark.zip" />
     <None Include="ProjectTemplates\QLogicae Qt Console.zip" />
     <None Include="ProjectTemplates\QLogicae Qt Desktop.zip" />
     <None Include="ProjectTemplates\QLogicae Qt Static Library.zip" />
-    <None Include="qlogicae_opera.vsix" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -89,15 +91,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\qlogicae_vs2022_dynamically_linked_library\qlogicae_vs2022_dynamically_linked_library.vcxproj">
-      <Project>{0B2FB70F-432B-41C4-AE55-139576AB62F0}</Project>
-      <Name>qlogicae_vs2022_dynamically_linked_library</Name>
-      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

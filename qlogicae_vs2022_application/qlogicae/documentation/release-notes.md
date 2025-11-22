@@ -12,7 +12,7 @@
 <h3>📜 Overview</h3>
 
 <ul>
-    <li><p>Under Revision</p></li>
+    <li><p>Initial Application Release</p></li>
 </ul>
 
 </br>
