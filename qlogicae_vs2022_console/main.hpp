@@ -2,6 +2,9 @@
 
 #include "qlogicae_vs2022_console/includes/application.hpp"
 
+#include "qlogicae_core/includes/cli_io.hpp"
+#include "qlogicae_core/includes/application.hpp"
+
 int main(int, char**);
 
 int WINAPI WinMain(

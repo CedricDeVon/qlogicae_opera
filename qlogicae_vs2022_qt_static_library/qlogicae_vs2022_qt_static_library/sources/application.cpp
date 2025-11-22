@@ -8,4 +8,9 @@ namespace QLogicaeVS2022QtStaticLibrary
 	{
 
 	}
+
+	void confirm_project_setup()
+	{
+		QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022QtStaticLibrary - Confirmed!");
+	}
 }

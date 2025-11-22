@@ -2,6 +2,8 @@
 
 #include "qlogicae_vs2022_nanobench_benchmark/includes/application.hpp"
 
+#include "qlogicae_core/includes/cli_io.hpp"
+
 int main(int, char**);
 
 int WINAPI WinMain(

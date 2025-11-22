@@ -22,6 +22,8 @@ namespace QLogicaeVS2022QtTest
 
         void init()
         {
+            QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022QtTest - Confirmed!");
+
             qDebug("Called before each test function is executed.");
         }
 

@@ -41,7 +41,7 @@ void selection_sort(std::vector<int> data)
 int main(int argc, char** argv) 
 {
     try
-    {
+    {        
         QLogicaePlotica::RuntimePerformanceBenchmarker& benchmarker =
             QLogicaePlotica::RuntimePerformanceBenchmarker::get_instance();
 
@@ -102,19 +102,20 @@ int main(int argc, char** argv)
                 }
             }
         );
+
+        QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022PloticaBenchmark - Confirmed!");
+
+        bool exit_code;
+        std::cin >> exit_code;
+
+        return 0;
     }
     catch (const std::exception& exception)
     {
         std::cout << exception.what() << "\n";
+
+        return 0;
     }
-
-    std::cout << "Enter to exit...\n";
-
-    bool exit_code;
-    std::cin >> exit_code;
-
-
-    return 0;
 }
 
 namespace QLogicaeVS2022PloticaBenchmark

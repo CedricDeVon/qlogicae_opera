@@ -39,7 +39,9 @@ void selection_sort(std::vector<int> data)
 }
 
 int main(int argc, char** argv)
-{
+{   
+    QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022PloticaBenchmark - Confirmed!");
+
     std::mt19937 rng(42);
     ankerl::nanobench::Bench bench;
     std::vector<int> base_data(1000);
@@ -65,11 +67,8 @@ int main(int argc, char** argv)
         }
     );
 
-    std::cout << "Enter to exit...\n";
-
     bool exit_code;
     std::cin >> exit_code;
-
 
     return 0;
 }

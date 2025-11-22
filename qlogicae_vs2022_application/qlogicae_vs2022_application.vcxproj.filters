@@ -65,6 +65,7 @@
     <None Include="qlogicae\documentation\1.0.0\security.md" />
     <None Include="qlogicae\documentation\index.md" />
     <None Include="qlogicae\documentation\release-notes.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Text Include=".qlogicae\application\templates\default\build\qlogicae\application\documentation\LICENSE.txt" />

@@ -4,5 +4,5 @@
 
 namespace QLogicaeVS2022QtConsole
 {
-
+	
 }

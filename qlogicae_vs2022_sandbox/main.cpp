@@ -4,10 +4,10 @@
 
 int main(int argc, char** argv)
 {
-    std::cout << "Enter to exit...\n";
+	QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022Sandbox - Confirmed!");
 
-    bool exit_code;
-    std::cin >> exit_code;
+	bool exit_code;
+	std::cin >> exit_code;
 
     return 0;
 }

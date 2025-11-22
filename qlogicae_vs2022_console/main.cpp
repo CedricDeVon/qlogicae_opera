@@ -3,8 +3,10 @@
 #include "main.hpp"
 
 int main(int argc, char** argv)
-{
-    std::cout << "Enter to exit...\n";
+{           
+    QLogicaeCore::QLOGICAE_APPLICATION.setup();
+
+    QLogicaeCore::CLI_IO.print_with_new_line("QLogicaeVS2022Console - Confirmed!");
 
     bool exit_code;
     std::cin >> exit_code;
