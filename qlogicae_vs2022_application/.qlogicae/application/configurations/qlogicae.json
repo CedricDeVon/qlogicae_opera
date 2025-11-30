@@ -3,11 +3,12 @@
         "startup_project_name": "",
         "executable_name": "",
         "is_administration_access_required": false,
-        "license_file_path": "qlogicae\\application\\documentation\\LICENSE.txt",
-        "icon_file_path": "qlogicae\\application\\assets\\application.ico",
-        "release_folder_path": "qlogicae\\qlogicae\\application\\releases"
+        "license_file_path": "qlogicae\\qlogicae\\application\\templates\\default\\build\\qlogicae\\application\\documentation\\LICENSE.txt",
+        "icon_file_path": "qlogicae\\qlogicae\\application\\templates\\default\\build\\qlogicae\\application\\assets\\application.ico",
+        "release_folder_path": "qlogicae\\.qlogicae\\application\\releases"
     },
     "windows_registry": {
+        "is_enabled": true,
         "hkcu": {
             "is_enabled": true
         },
@@ -16,6 +17,7 @@
         }
     },
     "environment_variables": {
+        "is_enabled": true,
         "user": {
             "is_enabled": false
         },
@@ -27,7 +29,26 @@
         "sample": "echo sample"
     },
     "build": {
-        "is_organization_enabled": false,
+        "is_clearing_enabled": true,
+        "setup_template": {
+            "is_enabled": true,
+            "public": {
+                "is_default_enabled": true,
+                "is_environment_enabled": true
+            },
+            "private": {
+                "is_default_enabled": true,
+                "is_environment_enabled": true
+            },
+            "application": {
+                "is_enabled": true
+            }
+        },
+        "organization": {
+            "is_enabled": true,
+            "is_bin_enabled": true,
+            "is_symbols_enabled": true
+        },
         "is_executable_renaming_enabled": true
     },
     "visual_studio_2022": {
@@ -161,4 +182,3 @@
         }
     }
 }
-

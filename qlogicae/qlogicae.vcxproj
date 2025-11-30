@@ -124,11 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Image Include="qlogicae\assets\application.ico">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="qlogicae\documentation\api.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
@@ -141,7 +137,7 @@
     <None Include="qlogicae\documentation\file-system.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="qlogicae\documentation\index.md">
+    <None Include="qlogicae\application\documentation\index.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="qlogicae\documentation\introduction.md">
@@ -159,7 +155,7 @@
     <None Include="qlogicae\documentation\references.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="qlogicae\documentation\release-notes.md">
+    <None Include="qlogicae\application\documentation\release-notes.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="qlogicae\documentation\security.md">
@@ -167,7 +163,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="qlogicae\application\templates\default\build\qlogicae\application\documentation\LICENSE.txt" />
     <Text Include="qlogicae\documentation\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="qlogicae\application\templates\default\build\qlogicae\application\assets\application.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

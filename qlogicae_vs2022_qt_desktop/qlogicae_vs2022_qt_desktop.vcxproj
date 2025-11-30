@@ -231,7 +231,7 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\utilities.cpp" />
-    <QtRcc Include="qlogicae_vs2022_qt_desktop\qt\application.qrc" />
+    <QtRcc Include="application.qrc" />
     <QtUic Include="qlogicae_vs2022_qt_desktop\qt\application.ui" />
     <QtMoc Include="qlogicae_vs2022_qt_desktop\includes\application.hpp" />
     <ClCompile Include="qlogicae_vs2022_qt_desktop\sources\all.cpp" />

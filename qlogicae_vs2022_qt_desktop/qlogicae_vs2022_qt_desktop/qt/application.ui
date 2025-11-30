@@ -36,7 +36,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="application.qrc"/>
+  <include location="../../application.qrc"/>
  </resources>
  <connections/>
 </ui>

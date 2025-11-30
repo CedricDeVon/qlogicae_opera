@@ -23,7 +23,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="qlogicae_vs2022_qt_desktop\qt\application.qrc">
+    <QtRcc Include="application.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
     <QtUic Include="qlogicae_vs2022_qt_desktop\qt\application.ui">

@@ -193,9 +193,6 @@ xcopy "%QT_DIR%\plugins\platforms\qwindows.dll" "%OUT_DIR%\platforms\" /Y /F</Co
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Image Include="qlogicae\application\assets\application.ico" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />

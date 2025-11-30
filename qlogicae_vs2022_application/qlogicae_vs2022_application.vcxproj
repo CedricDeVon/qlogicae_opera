@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -135,17 +135,6 @@
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include=".qlogicae\application\configurations\qlogicae.json" />
-    <None Include=".qlogicae\application\scripts\environment_variables\get.ps1" />
-    <None Include=".qlogicae\application\scripts\environment_variables\set.ps1" />
-    <None Include=".qlogicae\application\scripts\environment_variables\view.ps1" />
-    <None Include=".qlogicae\application\scripts\inno_setup\deploy.ps1" />
-    <None Include=".qlogicae\application\scripts\inno_setup\template.iss" />
-    <None Include=".qlogicae\application\scripts\utilities.ps1" />
-    <None Include=".qlogicae\application\scripts\visual_studio_2022\build.ps1" />
-    <None Include=".qlogicae\application\scripts\windows_registry\get.ps1" />
-    <None Include=".qlogicae\application\scripts\windows_registry\set.ps1" />
-    <None Include=".qlogicae\application\scripts\windows_registry\setup.ps1" />
-    <None Include=".qlogicae\application\scripts\windows_registry\view.ps1" />
     <None Include=".qlogicae\application\templates\debug\build\qlogicae\application\configurations\environment.json" />
     <None Include=".qlogicae\application\templates\debug\environment_variables\system.json" />
     <None Include=".qlogicae\application\templates\debug\environment_variables\user.json" />
@@ -171,6 +160,8 @@
     <None Include=".qlogicae\application\templates\test\environment_variables\user.json" />
     <None Include=".qlogicae\application\templates\test\windows_registry\hkcu.json" />
     <None Include=".qlogicae\application\templates\test\windows_registry\hklm.json" />
+    <None Include="qlogicae\application\documentation\index.md" />
+    <None Include="qlogicae\application\documentation\release-notes.md" />
     <None Include="qlogicae\documentation\1.0.0\api.md" />
     <None Include="qlogicae\documentation\1.0.0\collaboration.md" />
     <None Include="qlogicae\documentation\1.0.0\development.md" />
@@ -187,8 +178,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include=".qlogicae\application\templates\default\build\qlogicae\application\documentation\LICENSE.txt" />
+    <Text Include="qlogicae\application\templates\default\build\qlogicae\application\documentation\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="qlogicae\application\templates\default\build\qlogicae\application\assets\application.ico" />
     <Image Include="qlogicae\assets\application.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
